@@ -487,165 +487,72 @@ footer {
 
 
 
-@media (max-width: 1200px) {
-    .header { padding: 15px 6%; }
-    .home-content h1 { font-size: 42px; }
-    .home-img img { width: 350px; height: 350px; }
-}
-
+/* ===== RESPONSIVE SIMPLE & DIRECT ===== */
 @media (max-width: 1024px) {
-    .sub-title { font-size: 38px; }
-    .apropos-text h2 { font-size: 48px; }
+    .header { padding: 15px 5%; }
+    .home { flex-direction: column; text-align: center; padding: 120px 5%; }
+    .home-img img { width: 320px; height: 320px; margin-top: 2rem; }
 }
 
-@media (max-width: 900px) {
-    /* HEADER - MENU HAMBURGER */
+@media (max-width: 768px) {
+    /* MENU MOBILE */
     .header { 
         padding: 12px 4%; 
+        flex-direction: column; 
         gap: 1rem;
     }
     .navbar { 
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(5, 17, 41, 0.98);
-        flex-direction: column;
-        padding: 1rem 0;
-        backdrop-filter: blur(10px);
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .header.active .navbar {
-        transform: translateY(0);
-        opacity: 1;
+        flex-direction: column; 
+        width: 100%; 
+        gap: 1rem;
     }
     .navbar a { 
         font-size: 18px; 
-        margin: 0;
-        padding: 12px 4%;
-        border-bottom: 1px solid rgba(14,239,255,0.1);
-    }
-    .logo { font-size: 30px; }
-
-    /* HOME */
-    .home { 
-        flex-direction: column !important;
+        margin-left: 0; 
+        padding: 0.8rem;
         text-align: center;
-        padding: 110px 4% 60px !important;
-        min-height: 100vh;
-        gap: 2rem;
     }
-    .home-content { max-width: 95%; }
-    .home-img img { 
-        width: 280px !important; 
-        height: 280px !important;
-        max-width: 80vw;
-    }
-    .home-content h1 { font-size: 36px; }
-    .typewriter { font-size: 20px; }
-
+    
+    /* HOME */
+    .home-img img { width: 280px; height: 280px; }
+    
     /* A PROPOS */
     .apropos { 
-        grid-template-columns: 1fr !important;
-        padding: 60px 4% !important;
-        gap: 3rem;
+        grid-template-columns: 1fr !important; 
+        padding: 60px 4%;
         text-align: center;
     }
-    .apropos-img { order: -1; }
     .apropos-img img { 
-        width: 260px !important; 
-        height: 260px !important;
-        margin: 0 auto;
+        width: 260px; 
+        height: 260px; 
+        margin: 0 auto 2rem;
     }
-
+    
     /* COMPÉTENCES */
-    #competences { padding: 60px 4%; }
-    .competences-container { 
-        flex-direction: column !important;
-        gap: 3rem;
-    }
-    .sub-title { font-size: 32px; margin-bottom: 2.5rem; }
-    .container1 { width: 100%; max-width: 500px; margin: 0 auto; }
-    .radial-bars { 
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        justify-items: center;
-    }
-    .radial-bar { width: 100px; height: 100px; }
-    .radial-bar .text { bottom: -1.8rem; font-size: 14px; }
-
-    /* PROJETS */
-    .project-container { padding: 50px 4%; }
-    .image-track-wrapper { 
-        width: 100% !important;
-        max-width: 700px;
-        height: 220px !important;
-        left: 0 !important;
-        margin: 2rem auto 0;
-    }
-    .project-slider .image-track { 
-        gap: 1rem;
-        animation-duration: 15s;
-    }
-    .project-slider .image-track img { 
-        width: 260px !important;
-        min-width: 260px;
-    }
-
-    /* CONTACT */
-    .contact { 
-        flex-direction: column !important;
-        padding: 80px 4% 60px !important;
-        text-align: center;
-        gap: 2rem;
-    }
-    .contact-text h2, .contact-text h4, .contact-text p { 
-        margin-left: 0 !important;
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .header { padding: 10px 3%; }
-    .logo { font-size: 26px; }
-    .navbar a { font-size: 16px; }
-    
-    .home-content h1 { font-size: 30px; }
-    .home-img img { width: 240px !important; height: 240px !important; }
-    .typewriter { font-size: 18px; }
-    
-    .apropos-img img { width: 220px !important; height: 220px !important; }
-    .apropos-text h2 { font-size: 32px; }
-    
-    .sub-title { font-size: 28px; }
-    .radial-bars { gap: 1rem; }
-    .radial-bar { width: 85px; height: 85px; }
-    
-    .project-slider .image-track img { width: 220px !important; }
-    .image-track-wrapper { height: 190px !important; }
-    
-    .social-icons { 
-        gap: 1.2rem !important; 
-        flex-wrap: wrap;
-    }
-    .social-icons a i { font-size: 26px !important; }
+    .competences-container { flex-direction: column; gap: 3rem; }
+    #competences { padding: 50px 4%; }
 }
 
 @media (max-width: 480px) {
-    .home-img img { width: 200px !important; height: 200px !important; }
-    .apropos-img img { width: 190px !important; height: 190px !important; }
-    .project-slider .image-track img { width: 85vw !important; }
-    .radial-bars { 
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+    .logo { font-size: 28px; }
+    .home-img img { width: 240px; height: 240px; }
+    .apropos-img img { width: 220px; height: 220px; }
+    .sub-title { font-size: 32px; }
+    
+    /* PROJETS */
+    .image-track-wrapper { 
+        width: 100% !important; 
+        height: 200px !important; 
+        left: 0 !important;
     }
+    .project-slider .image-track img { width: 250px; }
+    
+    /* CONTACT */
+    .contact { flex-direction: column; padding: 60px 4%; }
+    .contact-text h4, .contact-text p { margin-left: 0 !important; }
 }
 
-@media (max-width: 360px) {
-    .header { padding: 8px 2%; }
-    .home-content h1 { font-size: 26px; }
-    .sub-title { font-size: 24px; }
-    .navbar a { font-size: 15px; padding: 10px 3%; }
-}
+/* FIX CRITIQUE - ZERO DÉBORD */
+* { max-width: 100%; }
+body { overflow-x: hidden; }
+.image-track-wrapper { overflow: hidden !important; }
